@@ -1,0 +1,57 @@
+@use './styles/variables.scss' as *;
+@use 'ngx-toastr/toastr' as *;
+@import 'bootstrap/scss/bootstrap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.mat-mdc-header-cell,
+.mat-header-cell {
+  font-weight: 700 !important;
+  font-size: 15px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.error {
+  color: #d32f2f; // vermelho padrão Material
+  font-size: 13px;
+}
+
+/* Remove fundo azul do autofill no Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+
+.primaryIcon{
+    color: $primary-color;
+}
+
+.dangerIcon{
+    color: $danger-color;
+}
+
+.secondaryIcon{
+    color: $secondary-color;
+}
+
+.doneIcon{
+    color: $done-color;
+}
+

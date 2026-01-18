@@ -1,0 +1,9 @@
+@use '../../../styles/variables.scss' as *;
+
+.full-width {
+  width: 100%;
+}
+
+.primaryIcon{
+    color: $primary-color;
+}

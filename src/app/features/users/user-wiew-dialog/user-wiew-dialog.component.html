@@ -1,0 +1,62 @@
+<mat-toolbar class="dialog-toolbar">
+  
+  <div class="toolbar-left">
+    <h2 class="title">Detalhes do Usuário</h2>
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="toolbar-actions">
+    <button
+      mat-icon-button
+      matTooltip="Expandir"
+      (click)="toggleExpandir()">
+      <mat-icon>
+        {{ expandido ? 'fullscreen_exit' : 'fullscreen' }}
+      </mat-icon>
+    </button>
+
+    <button
+      mat-icon-button
+      matTooltip="Fechar"
+      (click)="fechar()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-dialog-content *ngIf="user" class="dialog-content">
+
+  <!-- Metadados -->
+  <div class="meta-container">
+
+    <div class="meta-item">
+      <mat-icon class="secondaryIcon">person</mat-icon>
+      <div class="meta-text">
+        <span class="label">Nome</span>
+        <span class="value">{{ user?.nome }}</span>
+      </div>
+    </div>
+
+    <div class="meta-item">
+      <mat-icon class="doneIcon">mail</mat-icon>
+      <div class="meta-text">
+        <span class="label">E-mail</span>
+        <span class="value">{{ user.email }}</span>
+      </div>
+    </div>
+
+    <div class="meta-item">
+      <mat-icon [ngClass]="getRoleClass(user.role)">badge</mat-icon>
+      <div class="meta-text">
+        <span class="label">Perfil</span>
+        <span class="value">{{ getRoleLabel(user.role) }}</span>
+      </div>
+    </div>
+
+  </div>
+
+  <mat-divider></mat-divider>
+
+</mat-dialog-content>
+
